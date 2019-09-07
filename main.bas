@@ -215,12 +215,12 @@ Sub calc_A_mat(i As Integer)
     area(i) = (coord(conn(i, 1) * 2 - 1) - coord(conn(i, 3) * 2 - 1)) * (coord(conn(i, 2) * 2) - coord(conn(i, 3) * 2)) _
             - (coord(conn(i, 2) * 2 - 1) - coord(conn(i, 3) * 2 - 1)) * (coord(conn(i, 1) * 2) - coord(conn(i, 3) * 2))
     'Aマトリクスの計算
-    A_mat(i, 1, 1) = coord(conn(i, 2) * 2) - coord(conn(i, 3) * 2) / area(i)
-    A_mat(i, 1, 2) = coord(conn(i, 3) * 2) - coord(conn(i, 1) * 2) / area(i)
-    A_mat(i, 1, 3) = coord(conn(i, 1) * 2) - coord(conn(i, 2) * 2) / area(i)
-    A_mat(i, 2, 1) = coord(conn(i, 3) * 2 - 1) - coord(conn(i, 2) * 2 - 1) / area(i)
-    A_mat(i, 2, 2) = coord(conn(i, 1) * 2 - 1) - coord(conn(i, 3) * 2 - 1) / area(i)
-    A_mat(i, 2, 3) = coord(conn(i, 2) * 2 - 1) - coord(conn(i, 1) * 2 - 1) / area(i)
+    A_mat(i, 1, 1) = (coord(conn(i, 2) * 2) - coord(conn(i, 3) * 2)) / area(i)
+    A_mat(i, 1, 2) = (coord(conn(i, 3) * 2) - coord(conn(i, 1) * 2)) / area(i)
+    A_mat(i, 1, 3) = (coord(conn(i, 1) * 2) - coord(conn(i, 2) * 2)) / area(i)
+    A_mat(i, 2, 1) = (coord(conn(i, 3) * 2 - 1) - coord(conn(i, 2) * 2 - 1)) / area(i)
+    A_mat(i, 2, 2) = (coord(conn(i, 1) * 2 - 1) - coord(conn(i, 3) * 2 - 1)) / area(i)
+    A_mat(i, 2, 3) = (coord(conn(i, 2) * 2 - 1) - coord(conn(i, 1) * 2 - 1)) / area(i)
     area(i) = area(i) / 2
 End Sub
 
